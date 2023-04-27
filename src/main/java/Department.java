@@ -2,8 +2,7 @@ package src.main.java;
 
 import java.util.ArrayList;
 
-public class Department
-{
+public class Department {
     //---------------------------------------------VARIABLE---------------------------------
 
     private String department;
@@ -30,19 +29,15 @@ public class Department
 //---------------------------------------------BUSINESS LOGIC/METHODS-----------------------
 
     //add new customer
-    public void addCustomer(Customer customer)
-    {
+    public void addCustomer(Customer customer) {
         customerArray.add(customer);
     }
 
 
     // get a specific existing customer
-    public ArrayList<Customer> getASpecificCustomerArray(Customer customer)
-    {
-        for (int i = 0; i < customerArray.size(); i++)
-        {
-            if (customer.getCustomerId() == customerArray.get(i).getCustomerId())
-            {
+    public ArrayList<Customer> getASpecificCustomerArray(Customer customer) {
+        for (int i = 0; i < customerArray.size(); i++) {
+            if (customer.getCustomerId() == customerArray.get(i).getCustomerId()) {
                 System.out.println(customerArray.get(i).getCustomerInfo());
             }
         }
@@ -50,53 +45,45 @@ public class Department
     }
 
     // get ALL existing customer
-    public ArrayList<Customer> getCustomerArray()
-    {
-        for (int i = 0; i < customerArray.size(); i++)
-        {
+    public ArrayList<Customer> getCustomerArray() {
+        for (int i = 0; i < customerArray.size(); i++) {
             System.out.println("customer info: "
-             + customerArray.get(i).getCustomerInfo());
+                    + customerArray.get(i).getCustomerInfo());
         }
         return customerArray;
     }
 
 
     // update existing customer
-    public ArrayList<Customer> updateSpecifCustomerArray(Customer customer, String phone)
-    {
-//        for (int i = 0; i < customerArray.size(); i++)
-//        {
-//            if (customer.getCustomerId() == customerArray.get(i).getCustomerId())
-//            {
-//                customerArray.set(customer.setCustomerPhone("777-777-7777"));
-//                System.out.println(customerArray.get(i).getCustomerInfo());
-//            }
-//        }
-        return customerArray;
-    }
-
-
-
-    // delete existing customer
-    public ArrayList<Customer> deleteSpecificCustomerArray(Customer customer)
-    {
-        for (int i = 0; i < customerArray.size(); i++)
-        {
-            if (customer.getCustomerId() == customerArray.get(i).getCustomerId())
-            {
-                customerArray.remove(customer);
-             }
+    public ArrayList<Customer> updateSpecifCustomerArray(Customer customer, String address) {
+        for (int i = 0; i < customerArray.size(); i++) {
+            if (customer.getCustomerId() == customerArray.get(i).getCustomerId()) {
+                System.out.println("BEFORE UPDATE: " +
+                        customerArray.get(i).getCustomerAddress());
+                customer.setCustomerAddress(address);
+                System.out.println("AFTER UPDATE: "
+                        + customerArray.get(i).getCustomerAddress());
+                System.out.println(" ");
+            }
         }
         return customerArray;
     }
 
 
+    // delete existing customer
+    public ArrayList<Customer> deleteSpecificCustomerArray(Customer customer) {
+        for (int i = 0; i < customerArray.size(); i++) {
+            if (customer.getCustomerId() == customerArray.get(i).getCustomerId()) {
+                customerArray.remove(customer);
+            }
+        }
+        return customerArray;
+    }
 
 
     //---------------------------------------------GETTER/SETTER-----------------------------------------
 
-    public String getDepartment()
-    {
+    public String getDepartment() {
         return department;
     }
 
@@ -104,20 +91,16 @@ public class Department
         this.department = department;
     }
 
-    public String getDepartmentLocation()
-    {
+    public String getDepartmentLocation() {
         return departmentLocation;
     }
 
-    public void setDepartmentLocation(String departmentLocation)
-    {
+    public void setDepartmentLocation(String departmentLocation) {
         this.departmentLocation = departmentLocation;
     }
 
 
-
-    public void setCustomerArray(ArrayList<Customer> customerArray)
-    {
+    public void setCustomerArray(ArrayList<Customer> customerArray) {
         this.customerArray = customerArray;
     }
 }

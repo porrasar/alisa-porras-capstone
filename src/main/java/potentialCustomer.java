@@ -1,7 +1,6 @@
 package src.main.java;
 
-public class potentialCustomer extends Customer
-{
+public class potentialCustomer extends Customer {
 
     //---------------------------------------------VARIABLE-------------------------------------------
 
@@ -10,11 +9,9 @@ public class potentialCustomer extends Customer
     private String addressAppliedFor;
 
 
-
     //---------------------------------------------CONSTRUCTORS-------------------------------------------
 
-    public potentialCustomer()
-    {
+    public potentialCustomer() {
     }
 
     public potentialCustomer(boolean applicationApply, boolean depositPd, String addressAppliedFor) {
@@ -34,12 +31,12 @@ public class potentialCustomer extends Customer
 //---------------------------------------------BUSINESS LOGIC/METHODS---------------------------------
 
     @Override
-    public String getCustomerInfo()
-    {
+    public String getCustomerInfo() {
         String customerInfo = ("Customer in POTENTIAL: "
-                + " " + getCustomerId() + " " + getCustomerName() + " " + getCustomerAddress()
+                + " " + getCustomerId() + " " + getCustomerName()
+                + " " + getCustomerAddress()
                 + " " + getCustomerName() + " " + customerPhone
-                + " " + applicationApply + " " + depositPd  + " " + addressAppliedFor);
+                + " " + applicationApply + " " + depositPd + " " + addressAppliedFor);
 
 
         return customerInfo;

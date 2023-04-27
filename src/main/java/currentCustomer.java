@@ -1,7 +1,6 @@
 package src.main.java;
 
-public class currentCustomer extends Customer
-{
+public class currentCustomer extends Customer {
     //---------------------------------------------VARIABLE-------------------------------------------
 
     private boolean waterPd;
@@ -11,8 +10,7 @@ public class currentCustomer extends Customer
 
     //---------------------------------------------CONSTRUCTORS-------------------------------------------
 
-    public currentCustomer()
-    {
+    public currentCustomer() {
     }
 
     public currentCustomer(boolean waterPd, boolean electricPd, boolean grassCut, boolean rentPd) {
@@ -24,8 +22,7 @@ public class currentCustomer extends Customer
 
     public currentCustomer(int customerId, String customerName, String customerAddress, String customerPhone,
                            boolean waterPd, boolean electricPd,
-                           boolean grassCut, boolean rentPd)
-    {
+                           boolean grassCut, boolean rentPd) {
         super(customerId, customerName, customerAddress, customerPhone);
         this.waterPd = waterPd;
         this.electricPd = electricPd;
@@ -35,12 +32,11 @@ public class currentCustomer extends Customer
 
     //---------------------------------------------BUSINESS LOGIC/METHODS---------------------------------
     @Override
-    public String getCustomerInfo()
-    {
-        String customerInfo = ("Customer in CURRENT customer phone : " + " " + getCustomerId()
+    public String getCustomerInfo() {
+        String customerInfo = ("Customer in CURRENT: " + "   " + getCustomerId()
                 + " " + getCustomerName() + " " + getCustomerAddress()
                 + " " + getCustomerName() + " " + customerPhone
-                + " " + waterPd + " " + electricPd  + " " + grassCut + " " + rentPd);
+                + " " + waterPd + " " + electricPd + " " + grassCut + " " + rentPd);
 
         return customerInfo;
     }
@@ -77,7 +73,6 @@ public class currentCustomer extends Customer
     public void setRentPd(boolean rentPd) {
         this.rentPd = rentPd;
     }
-
 
 
 }
