@@ -60,7 +60,7 @@ public class Main {//class beg
         ArrayList<Customer> updateSpecifCustomerArray
                 = department.updateSpecifCustomerArray
                 (potentialCustomer1, updateAddress);
-        System.out.println(" ");
+        System.out.println("  ");
 
         // DELETE a specific existing customer
         System.out.println("DELETE A SPECIFIC EXISTING CUSTOMER");
