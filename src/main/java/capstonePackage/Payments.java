@@ -1,9 +1,8 @@
-package src.main.java;
+package src.main.java.capstonePackage;
 
 import java.time.LocalDate;
 
-public class Payments
-{//class beg
+public class Payments {//class beg
     //This is for any payments to our company
 
     //---------------------------------VARIABLES--------------------------------
@@ -14,8 +13,7 @@ public class Payments
 
     //--------------------------------CONSTRUCTORS--------------------------------
 
-    public Payments()
-    {
+    public Payments() {
     }
 
     public Payments(String paymentType, double paymentAmount, LocalDate localDate) {
@@ -25,7 +23,6 @@ public class Payments
     }
 
     //--------------------------------BUSINESS LOGIC-------------------------------
-
 
 
     //--------------------------------GETTER/SETTER--------------------------------

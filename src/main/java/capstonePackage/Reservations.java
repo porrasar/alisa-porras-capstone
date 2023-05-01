@@ -1,25 +1,20 @@
-package src.main.java;
+package src.main.java.capstonePackage;
 
-import java.sql.Time;
 import java.time.LocalDate;
-import java.util.ArrayList;
 
-public class Reservations
-{//class beg
+public class Reservations {//class beg
     //---------------------------------------------VARIABLE-------------------------------------------
 
 
     private int reservationNumber;
 
-   private LocalDate localDate;
-   //private Time timeOfReservation;
-
+    private LocalDate localDate;
+    //private Time timeOfReservation;
 
 
     //---------------------------------------------CONSTRUCTORS-------------------------------------------
 
-    public Reservations()
-    {
+    public Reservations() {
     }
 
     public Reservations(int reservationNumber, LocalDate localDate) {
@@ -27,7 +22,6 @@ public class Reservations
         this.localDate = localDate;
     }
 //---------------------------------------------BUSINESS LOGIC/METHODS---------------------------------
-
 
 
     //---------------------------------------------GETTER/SETTER-------------------------------------------

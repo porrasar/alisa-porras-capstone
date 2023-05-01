@@ -1,15 +1,12 @@
-package src.main.java;
+package src.main.java.capstonePackage;
 
-import java.util.ArrayList;
-
-public class Customer
-{
+public class Customer {
 
     //---------------------------------------------VARIABLE-------------------------------------------
 
     private int customerId;
     private String customerName;
-    private String customerAddress;
+    String customerAddress;
     String customerPhone;
 
 
@@ -30,26 +27,23 @@ public class Customer
     //---------------------------------------------BUSINESS LOGIC/METHODS---------------------------------
 
 
-    public String getCustomerInfo()
-    {
-        String customerInfo = ("im in customer class" );
+    public String getCustomerInfo() {
+        String customerInfo = ("im in customer class");
 
         return customerInfo;
     }
-    private void addNewCustomer(Customer customer)
-    {
+
+    private void addNewCustomer(Customer customer) {
 
 
     }
 
 
-    private void updateCustomer()
-    {
+    private void updateCustomer() {
 
     }
 
-    private void deleteCustomer()
-    {
+    private void deleteCustomer() {
 
     }
 
