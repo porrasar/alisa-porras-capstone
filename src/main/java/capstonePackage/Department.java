@@ -35,8 +35,13 @@ public class Department {
     //---------------------------------------------BUSINESS LOGIC/METHODS-----------------------
 
     //add new customer
-    public void addCustomer(Customer customer) {
+    public void addCustomer(Customer customer)
+    //public void addCustomer(String customer)
+    {
+        System.out.println("ADDED:  " + customer.getCustomerInfo());
         customerArray.add(customer);
+        //System.out.println("ADDED:  " + customerArray.add(customer));
+
     }
 
 
@@ -72,36 +77,29 @@ public class Department {
     // update existing customer
 //    public ArrayList<Customer> updateSpecifCustomerArray(Customer customer, String address) {
 
+    //    public String updateSpecifCustomerArray
+//            (int customerId, Customer customer) {
     public String updateSpecifCustomerArray
-            (int customerId, String customerField, String newInfoToUpdateField) {
+    (int customerId, String customerField, String newInfoToUpdateField) {
+
         for (int i = 0; i < customerArray.size(); i++) {
             if (customerId == customerArray.get(i).getCustomerId()) {
+                System.out.println("BEFORE UPDATE: "
+                        + customerArray.get(i).getCustomerInfo());
+                Customer customer = customerArray.get(i);
+                if (customerField.equals("name")) {
+                    System.out.println("customerField: " + customerField);
+                    customer.setCustomerName(newInfoToUpdateField);
+                } else
+                    customer.setCustomerAddress(newInfoToUpdateField);
 
-                String addressToChange = customerArray.get(i).getCustomerAddress();
-                System.out.println("BEFORE UPDATE: " + addressToChange);
-                addressToChange = newInfoToUpdateField;
-                //customerArray.set(i,customerArray);
-
-                //customerAddress.
-
+                customerArray.set(i, customer);
                 System.out.println("AFTER UPDATE: "
-                        + customerArray.get(i).getCustomerAddress());
+                        + customerArray.get(i).getCustomerInfo());
                 System.out.println(" ");
             }
         }
         return customerField;
-
-//        {
-//            if (customer.getCustomerId() == customerArray.get(i).getCustomerId()) {
-//                System.out.println("BEFORE UPDATE: " +
-//                        customerArray.get(i).getCustomerAddress());
-//                customer.setCustomerAddress(address);
-//                System.out.println("AFTER UPDATE: "
-//                        + customerArray.get(i).getCustomerAddress());
-//                System.out.println(" ");
-//            }
-//        }
-//        return customerArray;
     }
 
 

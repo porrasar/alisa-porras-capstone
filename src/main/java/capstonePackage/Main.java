@@ -46,10 +46,8 @@ public class Main {//class beg
 
 
         //using scanner to get user input
-        System.out.println("Enter your name:");
-        String name = scannerInput.next();
-        System.out.println(name + ",  please enter what you would like to do:");
-        System.out.println(" ");
+
+        System.out.println("Hello, please enter what you would like to do:");
 
         System.out.println("1. Add a customer");
         System.out.println("2. Get existing customer");
@@ -63,24 +61,34 @@ public class Main {//class beg
 
         // ADD a customer
         if (chosenOption.equals("1")) {
-            System.out.println("ADDED A NEW CUSTOMERS");
-            System.out.println("not working yet");
-//            System.out.println(name + ",  please enter information you "
-//                    + "would like to add: \n " +
-//                    "in this format: " +
-//                    "33333, \"Toby James\",\"8745 Too Little\", \"555-222-9858\",\n" +
-//                    " true, false, true, true);");
-//
-//            //45454,"tom boy","8745 yeah","888-777-9999",false,true,true,true
-//            String customerInput = scannerInput.next();
-//            department.addCustomer(customer);
+            System.out.println("ADD A NEW CUSTOMER");
+            System.out.println(" ");
+            System.out.println("please enter the information you "
+                    + "would like to add. There are 5 fields. \n" +
+                    "Please enter in this format: please put a comma" +
+                    " between the fields "
+                    + " for example: " +
+                    "33333,Toby James,8745 Too Little,555-222-9858,true");
+
+            String customerInput = scannerInput.next();
+            customerInput += scannerInput.nextLine();
+            System.out.println(customerInput);
+
+
+            Customer currentCustomer3 = new currentCustomer(customerInput);
+            //System.out.println(currentCustomer3.getCustomerInfo());
+
+            //Customer customer3 = customerInput;
+            department.addCustomer(currentCustomer3);
+            System.out.println("Proof record is added: ");
+            department.getCustomerArray();
             System.out.println(" ");
 
 
             // get a specific EXISTING customer
         } else if (chosenOption.equals("2")) {
             System.out.println("GET A SPECIFIC EXISTING CUSTOMER");
-            System.out.println(name + ",  please enter the customer id "
+            System.out.println("please enter the customer id "
                     + "you would like to attain: ");
             int customerId = scannerInput.nextInt();
             ArrayList<Customer> customerGetSpecificArrayList
@@ -100,18 +108,23 @@ public class Main {//class beg
             // UPDATE a specific existing customer
         } else if (chosenOption.equals("4")) {
             System.out.println("they chose option 4 to update existing customer");
-            System.out.println("not working yet");
 
-            System.out.println(name + ",  please enter the customer id "
+
+            System.out.println("  please enter the customer id "
                     + "you would like to update: ");
             int customerId = scannerInput.nextInt();
 
-            System.out.println(name + ",  please enter the field you would "
-                    + "like to update (name or address: ");
+            System.out.println("please enter the field you would "
+                    + "like to update (name or address: )");
+
             String customerField = scannerInput.next();
 
-            System.out.println(name + ",  please enter the new info:   ");
+            System.out.print("please enter the new info:   ");
+
             String newInfoToUpdateField = scannerInput.next();
+            newInfoToUpdateField += scannerInput.nextLine();
+            //System.out.println("the new info:   "
+            //        + newInfoToUpdateField);
 
 //            ArrayList<Customer> customerGetSpecificArrayList
 //                    = department.getASpecificCustomerArray(customerId);
@@ -133,7 +146,7 @@ public class Main {//class beg
         } else if (chosenOption.equals("5")) {
             System.out.println("they chose option 5 to delete");
             System.out.println("DELETE A SPECIFIC EXISTING CUSTOMER");
-            System.out.println(name + ",  please enter the customer id to delete: ");
+            System.out.println("please enter the customer id to delete: ");
             int customerId = scannerInput.nextInt();
             //ArrayList<Customer> deleteSpecificCustomerArray =
             department.deleteSpecificCustomerArray(customerId);

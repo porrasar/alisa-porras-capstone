@@ -19,6 +19,9 @@ public class currentCustomer extends Customer {// class beg
         this.waterPd = waterPd;
     }
 
+    public currentCustomer(String customerInput) {
+    }
+
     //    public currentCustomer(boolean waterPd, boolean electricPd, boolean grassCut, boolean rentPd) {
 //        this.waterPd = waterPd;
 //        this.electricPd = electricPd;
