@@ -23,6 +23,9 @@ public class Customer {
         this.customerPhone = customerPhone;
     }
 
+    public Customer(String customerInput) {
+    }
+
 
     //---------------------------------------------BUSINESS LOGIC/METHODS---------------------------------
 

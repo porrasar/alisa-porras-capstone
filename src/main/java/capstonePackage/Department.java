@@ -35,13 +35,15 @@ public class Department {
     //---------------------------------------------BUSINESS LOGIC/METHODS-----------------------
 
     //add new customer
-    public void addCustomer(Customer customer)
+    //public void addCustomer(Customer customer)
     //public void addCustomer(String customer)
-    {
-        System.out.println("ADDED:  " + customer.getCustomerInfo());
+    public ArrayList<Customer> addCustomer(Customer customer) {
+        //System.out.println("ADDED:  " + customer.getCustomerInfo());
         customerArray.add(customer);
+
         //System.out.println("ADDED:  " + customerArray.add(customer));
 
+        return customerArray;
     }
 
 

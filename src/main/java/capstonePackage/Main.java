@@ -14,7 +14,6 @@ public class Main {//class beg
         Reservations reservations = new Reservations();
         Payments payments = new Payments();
         Customer customer = new Customer();
-        //DupCustomerArray dupCustomerArray = new DupCustomerArray();
         Department department = new Department();
 
 
@@ -65,20 +64,27 @@ public class Main {//class beg
             System.out.println(" ");
             System.out.println("please enter the information you "
                     + "would like to add. There are 5 fields. \n" +
-                    "Please enter in this format: please put a comma" +
+                    "Please enter in this format: please put two spaces" +
                     " between the fields "
                     + " for example: " +
                     "33333,Toby James,8745 Too Little,555-222-9858,true");
 
             String customerInput = scannerInput.next();
             customerInput += scannerInput.nextLine();
-            System.out.println(customerInput);
+            System.out.println("customer input: " + customerInput);
 
+            Customer currentCustomer3 = new Customer(customerInput);
 
-            Customer currentCustomer3 = new currentCustomer(customerInput);
-            //System.out.println(currentCustomer3.getCustomerInfo());
+            System.out.println("ADD STILL NOT WORKING");
+            System.out.println("currentcust3: "
+                    + (currentCustomer3.toString()));
 
-            //Customer customer3 = customerInput;
+            //Customer currentCustomer3 = new currentCustomer(customerInput);
+            //System.out.println(Arrays.toString(currentCustomer3));
+            //ArrayList<Customer> currentCustomer3
+            //List<Customer> currentCustomer3
+            //        = department.getCustomerArray();
+            //System.out.println("new data: "
             department.addCustomer(currentCustomer3);
             System.out.println("Proof record is added: ");
             department.getCustomerArray();
@@ -115,7 +121,7 @@ public class Main {//class beg
             int customerId = scannerInput.nextInt();
 
             System.out.println("please enter the field you would "
-                    + "like to update (name or address: )");
+                    + "like to update (name or address)");
 
             String customerField = scannerInput.next();
 
@@ -123,20 +129,6 @@ public class Main {//class beg
 
             String newInfoToUpdateField = scannerInput.next();
             newInfoToUpdateField += scannerInput.nextLine();
-            //System.out.println("the new info:   "
-            //        + newInfoToUpdateField);
-
-//            ArrayList<Customer> customerGetSpecificArrayList
-//                    = department.getASpecificCustomerArray(customerId);
-//            System.out.println("UPDATE A SPECIFIC EXISTING CUSTOMER");
-//            System.out.println(name + ",  please enter what you would like to change: ");
-//
-//            String updateAddress = scannerInput.next();
-//            ArrayList<Customer> updateSpecifCustomerArray
-//                    = department.updateSpecifCustomerArray
-//                    (potentialCustomer1, updateAddress);
-
-//             ArrayList<Customer> updateSpecifCustomerArray
             department.updateSpecifCustomerArray
                     (customerId, customerField, newInfoToUpdateField);
             System.out.println("  ");
@@ -148,9 +140,7 @@ public class Main {//class beg
             System.out.println("DELETE A SPECIFIC EXISTING CUSTOMER");
             System.out.println("please enter the customer id to delete: ");
             int customerId = scannerInput.nextInt();
-            //ArrayList<Customer> deleteSpecificCustomerArray =
             department.deleteSpecificCustomerArray(customerId);
-            //customerArrayList = department.getCustomerArray();
 
         }
 
